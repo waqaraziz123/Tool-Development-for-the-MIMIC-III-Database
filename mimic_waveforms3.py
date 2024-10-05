@@ -23,7 +23,7 @@ Outputs:
    
 How to run it:
 
-python mimic_waveform2.py | out-file mimic_waveform2.csv -encoding ASCII
+python mimic_waveform3.py | out-file mimic_waveform3.csv -encoding ASCII
 
 """
 import __main__ as mn
