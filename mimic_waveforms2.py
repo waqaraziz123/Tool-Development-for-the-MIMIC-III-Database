@@ -1,6 +1,6 @@
-# mimic_waveform2.py
+# mimic_waveforms2.py
 """
-This code will generate a similar csv file as mimic_waveform1.csv but without a frequency resolution column (as it is the same for all the recordings, i.e., 125 Hz) 
+This code will generate a similar csv file as mimic_waveforms1.csv but without a frequency resolution column (as it is the same for all the recordings, i.e., 125 Hz) 
 
 Access to MIMIC-III Clinical Database: https://physionet.org/content/mimiciii/1.4/
 
@@ -8,17 +8,17 @@ Access to MIMIC-III Waveform Database Matched Subset: https://physionet.org/cont
 
 Inputs:
 
--- mimic_waveform1.csv
+-- mimic_waveforms1.csv
    
 Outputs:
 
--- mimic_waveform2.csv 
+-- mimic_waveforms2.csv 
     This will output the contents of matched waveforms (i.e., subject_id, header file name, time stamp, signal duration, and signal name)
     for all subjects present in the MIMIC-III matched waveform database.
    
 How to run it:
 
-python mimic_waveform2.py | out-file mimic_waveform2.csv -encoding ASCII
+python mimic_waveforms2.py | out-file mimic_waveforms2.csv -encoding ASCII
 
 """
 
