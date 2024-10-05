@@ -1,4 +1,4 @@
-# mimic_waveform4.py
+# mimic_waveforms4.py
 """
 This code can match the patient's files in the MIMIC-III clinical database with the
 MIMIC-III Waveform Database Matched Subset (waveform records).
@@ -23,7 +23,8 @@ Inputs:
                             from the MIMIC-III clinical database and as onset time (predicttime).
 Outputs:
 
--- After matching, this will output the contents of clinicalvitals_1h.txt and matched information from the
+-- waveformsmatched_1h.csv
+   After matching, this will output the contents of clinicalvitals_1h.txt and matched information from the
    MIMIC-III matched waveform database (i.e., header file names and offset duration).
    
 How to run it:
