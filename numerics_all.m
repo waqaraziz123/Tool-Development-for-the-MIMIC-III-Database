@@ -1,4 +1,4 @@
-%%% Creating numerics_all.csv file
+%%% This code can generate the 'numerics_all.csv' file used in mimic_numerics.py
 
 clear all;
 path1 = 'C:\Users\Desktop\';
