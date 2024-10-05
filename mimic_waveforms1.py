@@ -13,7 +13,8 @@ Inputs:
    
 Outputs:
 
--- This will output the contents of matched waveforms (i.e., subject_id, header file name, time stamp, signal duration, signal name, and frequency resolution)
+-- mimic_waveforms1.csv
+   This will output the contents of matched waveforms (i.e., subject_id, header file name, time stamp, signal duration, signal name, and frequency resolution)
    for all subjects present in the MIMIC-III matched waveform database.
    
 How to run it:
