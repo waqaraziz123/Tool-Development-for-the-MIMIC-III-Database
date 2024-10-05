@@ -1,4 +1,4 @@
-# mimic_waveform1.py
+# mimic_waveforms1.py
 """
 This code can search the entire MIMIC-III Waveform Database Matched Subset (waveform records).
 
@@ -18,7 +18,7 @@ Outputs:
    
 How to run it:
 
-python mimic_waveform1.py | out-file mimic_waveform1.csv -encoding ASCII
+python mimic_waveforms1.py | out-file mimic_waveforms1.csv -encoding ASCII
 
 """
 
