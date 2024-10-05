@@ -1,5 +1,37 @@
+# mimic_numerics.py
+"""
+This code can match the patient's files in the MIMIC-III clinical database with the
+MIMIC-III Waveform Database Matched Subset (numerics records).
 
+Access to MIMIC-III Clinical Database: https://physionet.org/content/mimiciii/1.4/
 
+Access to MIMIC-III Waveform Database Matched Subset: https://physionet.org/content/mimic3wdb-matched/1.0/
+
+Inputs:
+
+-- numerics_all.csv -- This contains information about all numerics records (i.e., header file name, time of recording,
+                       frequency resolution (1 sec or 1 minute), duration of the signals, and data file name).
+                       This can be created by running numerics_all.m on your local machine. 
+                       
+-- ids.csv -- This contains information about ICU Stay IDs and corresponding Subject IDs.
+
+-- clinicalvitals_1h.txt -- This contains information about features calculated
+                            from the MIMIC-III clinical database and as onset time (predicttime).
+Outputs:
+
+-- After matching, this will output the contents of clinicalvitals_1h.txt and matched information from the
+   MIMIC-III matched numerics database (i.e., file names, offset duration, data file name, and frequency resolution).
+   
+How to run it:
+
+python mimic_numerics.py | out-file numericsmatched_1h.csv -encoding ASCII
+
+Assumptions:
+
+-- This code assumes that you have installed the MIMIC-III clinical database on your machine and extracted the features and required timestamps.
+   This code also assumes that you have downloaded the MIMIC-III Waveform Database Matched Subset on your local machine to scroll through the header files
+   to extract the required information about data files and offset values.
+"""
 import __main__ as mn
 if not hasattr(mn,'__file__'):
   for _clrk in list(vars().keys()):
@@ -13,16 +45,15 @@ import re
 import pdb
 
 if True:
-  N = 629321   # number of entries in the numerics database
-  N = 22055    # number of entries in the numerics2 database
-  N = 22247	   # number of enteries in numerics2_new.csv file
+  
+  N = 22247	   # number of entries in numerics_all.csv file
   epoch      = np.zeros(N,dtype=float)
   samples    = np.zeros(N,dtype=float)
   intervals  = np.zeros(N,dtype=float)
   filenames  = np.empty(N,dtype='<U26')
   datfiles   = np.empty(N,dtype='<U13')
   invert     = dict() # allows us to find line numbers that match a patient id
-  with open('numerics2_all.csv','r',newline=None) as infile:
+  with open('numerics_all.csv','r',newline=None) as infile:
     ii = -1
     for line in infile:
       ii += 1
