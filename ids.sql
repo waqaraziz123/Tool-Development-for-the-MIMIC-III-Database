@@ -1,0 +1,1 @@
+\copy (select icustay_id,subject_id from icustays order by icustay_id) to 'C:\Users\Desktop\ids.csv' CSV header;
