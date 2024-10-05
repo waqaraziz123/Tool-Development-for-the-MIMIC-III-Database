@@ -1,4 +1,31 @@
+# mimic_waveform4.py
+"""
+This code will search for a particular signal (i.e., Blood Pressure (ABP), ECG, ppg etc.) in the MIMIC-III matched waveform database
+and will store the data in numpy arrays.
 
+Access to MIMIC-III Clinical Database: https://physionet.org/content/mimiciii/1.4/
+
+Access to MIMIC-III Waveform Database Matched Subset: https://physionet.org/content/mimic3wdb-matched/1.0/
+
+Inputs:
+
+-- mimic_waveform2.csv
+   
+Outputs:
+
+-- mimic_waveform3.csv -- This will output the iteration numbers (data integrity check)
+-- wpatient_abp.npy 
+-- wname0_abp.npy
+-- wname1_abp.npy
+-- wtime_abp.npy
+-- wlen_abp.npy
+-- wtype_abp.npy
+   
+How to run it:
+
+python mimic_waveform3.py | out-file mimic_waveform3.csv -encoding ASCII
+
+"""
 import __main__ as mn
 from matplotlib.pyplot import ion
 if not hasattr(mn,'__file__'):
