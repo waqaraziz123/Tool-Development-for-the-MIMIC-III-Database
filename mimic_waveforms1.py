@@ -1,4 +1,26 @@
+# mimic_waveform1.py
+"""
+This code can search the entire MIMIC-III Waveform Database Matched Subset (waveform records).
 
+Access to MIMIC-III Clinical Database: https://physionet.org/content/mimiciii/1.4/
+
+Access to MIMIC-III Waveform Database Matched Subset: https://physionet.org/content/mimic3wdb-matched/1.0/
+
+Inputs:
+
+-- This code assumes that you have downloaded the MIMIC-III Waveform Database Matched Subset on your local machine to scroll through the header files
+   to extract the required information about data files and offset values.
+   
+Outputs:
+
+-- This will output the contents of matched waveforms (i.e., subject_id, header file name, time stamp, signal duration, signal name, and frequency resolution)
+   for all subjects present in the MIMIC-III matched waveform database.
+   
+How to run it:
+
+python mimic_waveform1.py | out-file mimic_waveform1.csv -encoding ASCII
+
+"""
 
 import __main__ as mn
 from matplotlib.pyplot import ion
